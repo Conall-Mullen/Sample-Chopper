@@ -1,0 +1,26 @@
+inlets = 1;
+outlets = 2;
+
+var beg;
+var end;
+
+
+function slice(seg,index){
+
+	if(index == 0){
+		beg = 0;
+		end = seg;
+	}else if(index == 1){
+		beg = seg;
+		end = seg * 2.0;
+	}else if(index == 2){
+		beg = seg * 2.0;
+		end = seg * 3.0;
+	}else if(index == 3){
+		beg = seg * 3.0;
+		end = seg * 4.0;
+	}
+	outlet(0, beg);
+	outlet(1, end);
+}
+	
